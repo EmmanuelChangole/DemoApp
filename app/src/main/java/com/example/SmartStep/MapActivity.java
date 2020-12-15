@@ -1,4 +1,4 @@
-package io.indoorlocation.demoapp;
+package com.example.SmartStep;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,15 +13,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.FrameLayout;
 
+import com.example.navisens.NavisensIndoorLocationProvider;
+
 import java.util.Locale;
 
+import io.indoorlocation.SmartStep.R;
 import io.indoorlocation.core.IndoorLocation;
-import io.indoorlocation.core.IndoorLocationProvider;
 import io.indoorlocation.manual.ManualIndoorLocationProvider;
-import io.indoorlocation.navisens.NavisensIndoorLocationProvider;
 import io.mapwize.mapwizesdk.api.LatLngFloor;
 import io.mapwize.mapwizesdk.api.MapwizeObject;
-import io.mapwize.mapwizesdk.map.ClickEvent;
 import io.mapwize.mapwizesdk.map.MapOptions;
 import io.mapwize.mapwizesdk.map.MapwizeMap;
 import io.mapwize.mapwizesdk.map.MapwizeView;
@@ -31,7 +31,7 @@ public class MapActivity extends AppCompatActivity implements MapwizeFragment.On
 
     private MapwizeFragment mapwizeFragment;
     private static final int MY_PERMISSION_ACCESS_FINE_LOCATION = 0;
-
+    FrameLayout container;
     MapwizeView mapwizeView;
     MapwizeMap mapwizeMap;
     private ManualIndoorLocationProvider manualIndoorLocationProvider;
@@ -42,9 +42,8 @@ public class MapActivity extends AppCompatActivity implements MapwizeFragment.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        FrameLayout container = findViewById(R.id.container);
-
-        MapOptions opts = new MapOptions.Builder()
+       container = findViewById(R.id.container);
+       MapOptions opts = new MapOptions.Builder()
                 .language(Locale.getDefault().getLanguage()).build();
         mapwizeFragment = MapwizeFragment.newInstance(opts);
         FragmentManager fm = getSupportFragmentManager();
@@ -108,7 +107,7 @@ public class MapActivity extends AppCompatActivity implements MapwizeFragment.On
     private void setupLocationProvider() {
         manualIndoorLocationProvider = new ManualIndoorLocationProvider();
         manualIndoorLocationProvider.start();
-        navisensIndoorLocationProvider = new NavisensIndoorLocationProvider(getApplicationContext(), DemoApplication.NAVISENS_API_KEY, manualIndoorLocationProvider);
+        navisensIndoorLocationProvider = new NavisensIndoorLocationProvider(getApplicationContext(), MainApplication.NAVISENS_API_KEY, manualIndoorLocationProvider);
         navisensIndoorLocationProvider.start();
         mapwizeMap.setIndoorLocationProvider(navisensIndoorLocationProvider);
     }

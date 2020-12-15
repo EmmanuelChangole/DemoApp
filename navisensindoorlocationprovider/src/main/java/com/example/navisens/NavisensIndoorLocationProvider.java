@@ -1,4 +1,4 @@
-package io.indoorlocation.navisens;
+package com.example.navisens;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

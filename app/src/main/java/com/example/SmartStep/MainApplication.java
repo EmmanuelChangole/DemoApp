@@ -1,4 +1,4 @@
-package io.indoorlocation.demoapp;
+package com.example.SmartStep;
 
 import android.app.Application;
 
@@ -11,12 +11,12 @@ import io.mapwize.mapwizesdk.core.MapwizeConfiguration;
  * After asking for location permission, this app will run a NavisensIndoorLocationProvider with Mapwize.
  * Click on the map to set a user location then walk with your device to see your location moving based on Navisens data.
  */
-public class DemoApplication extends Application {
+public class MainApplication extends android.app.Application {
 
     // This is a demo key, giving you access to the demo building. It is not allowed to use it for production.
     // The key might change at any time without notice. Get your key by signin up at mapwize.io
-    static final String MAPWIZE_API_KEY = "YOUR_MAPWIZE_API_KEY";
-    static final String NAVISENS_API_KEY = "YOUR_NAVISENS_API_KEY";
+    static final String MAPWIZE_API_KEY = "63b20610cb5ac03ec410c5ecd17b7b74";
+    static final String NAVISENS_API_KEY = "6D6Ru9CRrdA0kjyoh5wEuT7YH4NyHsOf1b9O9yI0rKBNRAZa3dkwoBG9Ox0NkEUl";
 
 
     @Override

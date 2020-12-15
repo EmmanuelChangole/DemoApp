@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DemoApp.iml" filepath="$PROJECT_DIR$/DemoApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/navisensindoorlocationprovider/navisensindoorlocationprovider.iml" filepath="$PROJECT_DIR$/navisensindoorlocationprovider/navisensindoorlocationprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DemoApp.iml" filepath="$PROJECT_DIR$/.idea/modules/DemoApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DemoApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DemoApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/navisensindoorlocationprovider/DemoApp.navisensindoorlocationprovider.iml" filepath="$PROJECT_DIR$/.idea/modules/navisensindoorlocationprovider/DemoApp.navisensindoorlocationprovider.iml" />
     </modules>
   </component>
 </project>

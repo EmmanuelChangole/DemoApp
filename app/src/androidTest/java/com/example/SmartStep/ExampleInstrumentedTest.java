@@ -1,4 +1,4 @@
-package io.indoorlocation.demoapp;
+package com.example.SmartStep;
 
 import android.content.Context;
 
