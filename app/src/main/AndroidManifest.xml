@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.indoorlocation.SmartStep">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
 
     <application
         android:name="com.example.SmartStep.MainApplication"
@@ -10,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.SmartStep.OpenLoaction"></activity>
+        <activity android:name="com.example.SmartStep.BarcodeActivity"></activity>
+        <activity android:name="com.example.SmartStep.OpenLoaction" />
         <activity android:name="com.example.SmartStep.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,10 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.SmartStep.AccelerometerData">
+        <activity android:name="com.example.SmartStep.AccelerometerData"></activity>
+        <activity android:name="com.example.SmartStep.MapActivity" />
+        <activity android:name="com.example.SmartStep.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            >
 
         </activity>
-        <activity android:name="com.example.SmartStep.MapActivity"></activity>
     </application>
 
 </manifest>

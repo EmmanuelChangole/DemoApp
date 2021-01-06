@@ -21,4 +21,10 @@ public class OpenLoaction extends AppCompatActivity {
         Intent intent=new Intent(this,MapActivity.class);
         startActivity(intent);
     }
+
+    public void OpenScannner(View view)
+    {
+        Intent intent=new Intent(this, BarcodeActivity.class);
+        startActivity(intent);
+    }
 }
